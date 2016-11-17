@@ -18,4 +18,30 @@ commentApp.config(['$urlRouterProvider', '$stateProvider', '$locationProvider', 
         }
       }
     })
+    .state('login', {
+      url: '/login',
+      views: {
+        'nav': {
+          templateUrl: '/partials/nav.php',
+          controller: 'mainController'
+        },
+        'form': {
+          templateUrl: '/partials/login.php',
+          controller: 'mainController'
+        }
+      }
+    })
+    .state('register', {
+      url: '/register',
+      views: {
+        'nav': {
+          templateUrl: '/partials/nav.php',
+          controller: 'mainController'
+        },
+        'form': {
+          templateUrl: '/partials/register.php',
+          controller: 'mainController'
+        }
+      }
+    })
 }]);
